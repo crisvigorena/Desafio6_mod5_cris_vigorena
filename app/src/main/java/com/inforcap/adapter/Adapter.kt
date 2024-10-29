@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.inforcap.data.Data
-import com.inforcap.databinding.ItemStoreBinding
 import com.bumptech.glide.Glide
 import com.inforcap.R
+import com.inforcap.data.Data
+import com.inforcap.databinding.ItemStoreBinding
 
 
 class Adapter (
@@ -43,7 +43,7 @@ class Adapter (
             }
 
             binding.constrait2.setOnClickListener {
-                onClick.invoke(store)
+                onClick?.invoke(store)
             }
         }
     }

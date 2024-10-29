@@ -2,10 +2,7 @@ package com.inforcap
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.inforcap.adapter.Adapter
 import com.inforcap.data.Data
@@ -33,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onItemSelected(store: Data){
-        startActivity(Intent(applicationContext, Store_Details::class.java).apply {
+        startActivity(Intent(applicationContext, StoreDetailActivity::class.java).apply {
             putExtra("BUNDLE", Bundle().apply {
                 putParcelable("STORE",store)
                 putInt("ID",store.id)
